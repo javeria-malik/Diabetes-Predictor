@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container" 
+         style="background-image: url('{{ url_for('static', filename='diabetes-banner.jpg') }}'); 
+                background-size: cover; 
+                background-position: center; 
+                background-repeat: no-repeat;
+                padding: 40px; 
+                border-radius: 8px;">
+        <h2 style="color: #0A3D62;">Welcome to the Diabetes Predictor</h2>
+        <p style="color: #0A3D62;">Click the button below to check your diabetes risk.</p>
+        <a href="{{ url_for('predict_page') }}" class="btn">Move to Prediction Page</a>
+    </div>
+{% endblock %}
